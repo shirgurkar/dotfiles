@@ -1,0 +1,9 @@
+#!/bin/bash
+battery=$(cat /sys/class/power_supply/BAT*/capacity 2>/dev/null)
+status=$(cat /sys/class/power_supply/BAT*/status 2>/dev/null)
+
+if [ "$status" == "Charging" ]; then
+    echo "BAT: ${battery}% (Chg)"
+else
+    echo "BAT: ${battery}%"
+fi

@@ -1,0 +1,26 @@
+# i3blocks configuration
+
+# Time and Date
+[time]
+command=date '+%a %d %b %I:%M %p'
+interval=60
+
+# Battery
+[battery]
+command=~/.config/i3blocks/battery
+interval=30
+
+# Memory
+[memory]
+command=~/.config/i3blocks/memory
+interval=5
+
+# CPU usage
+[cpu]
+command=~/.config/i3blocks/cpu
+interval=5
+
+# Separator
+separator_block_width=20
+separator=true
+markup=pango
