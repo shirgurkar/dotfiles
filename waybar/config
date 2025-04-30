@@ -1,0 +1,48 @@
+{
+  "layer": "top",
+    "position": "top",
+    "modules-left": ["sway/workspaces", "sway/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["mpris","pulseaudio", "network", "battery", "tray"],
+
+    "sway/window": {
+      "max-length": 80,
+      "tooltip": false,
+      "format": "{}"
+    },
+
+    "clock": {
+      "format": "{:%a %d %b %I:%M %p}",
+      "tooltip": false
+    },
+    "pulseaudio": {
+      "format": " {volume}%",
+      "format-muted": " Muted",
+    },
+    "network": {
+      "format-wifi": " {signalStrength}%",
+      "format-ethernet": " {ifname}",
+      "format-disconnected": "⚠ Disconnected"
+    },
+      "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+      },
+      "tray": {
+        "icon-size": 16
+      },
+      "mpris": {
+        "max-length": 40,
+        "format": "{player_icon} {title} - {artist}",
+        "player-icons": {
+          "spotify": "",
+          "default": "🎵"
+        },
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl previous",
+        "on-scroll-down": "playerctl next",
+        "tooltip": true,
+        "tooltip-format": "Playing: {title}\nArtist: {artist}\nAlbum: {album}",
+        "format-stopped": ""
+      }
+}
