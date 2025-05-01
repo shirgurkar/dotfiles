@@ -50,3 +50,19 @@
   font-weight: 500;
   font-style: italic;
 }
+#bluetooth {
+  padding: 0 10px;
+}
+
+#bluetooth.off {
+  color: #4C566A;
+}
+
+#bluetooth.on {
+  color: #A3BE8C;
+}
+
+#bluetooth.connected {
+  color: #88C0D0;
+}
+
