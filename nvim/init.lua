@@ -55,51 +55,51 @@ require('packer').startup(function(use)
     end
   }
 
-  -- Catppuccin color scheme
-  use {
-    'catppuccin/nvim',
-    as = 'catppuccin',
-    config = function()
-      vim.cmd('colorscheme catppuccin-macchiato')
-    end
-  }
-
-  -- Lualine status line with Catppuccin theme
-  use {
-    'nvim-lualine/lualine.nvim',
-    config = function()
-      require('lualine').setup {
-        options = {
-          theme = 'catppuccin',
-          section_separators = '',
-          component_separators = ''
-        }
-      }
-    end
-  }
+  -- -- Catppuccin color scheme
+  -- use {
+  --   'catppuccin/nvim',
+  --   as = 'catppuccin',
+  --   config = function()
+  --     vim.cmd('colorscheme catppuccin-macchiato')
+  --   end
+  -- }
+  --
+  -- -- Lualine status line with Catppuccin theme
+  -- use {
+  --   'nvim-lualine/lualine.nvim',
+  --   config = function()
+  --     require('lualine').setup {
+  --       options = {
+  --         theme = 'catppuccin',
+  --         section_separators = '',
+  --         component_separators = ''
+  --       }
+  --     }
+  --   end
+  -- }
 
 -- Gruvbox color scheme (commented out - uncomment to use)
--- use {
---   'morhetz/gruvbox',
---   config = function()
---     vim.o.background = 'dark'                -- Ensure dark background
---     vim.g.gruvbox_contrast_dark = 'hard'     -- Use "hard" contrast
---     vim.cmd('colorscheme gruvbox')
---   end
--- }
--- -- Lualine with Gruvbox theme (uncomment if using Gruvbox)
--- use {
---   'nvim-lualine/lualine.nvim',
---   config = function()
---     require('lualine').setup {
---       options = {
---         theme = 'gruvbox',
---         section_separators = '',
---         component_separators = ''
---       }
---     }
---   end
--- }
+use {
+  'morhetz/gruvbox',
+  config = function()
+    vim.o.background = 'dark'                -- Ensure dark background
+    vim.g.gruvbox_contrast_dark = 'hard'     -- Use "hard" contrast
+    vim.cmd('colorscheme gruvbox')
+  end
+}
+-- Lualine with Gruvbox theme (uncomment if using Gruvbox)
+use {
+  'nvim-lualine/lualine.nvim',
+  config = function()
+    require('lualine').setup {
+      options = {
+        theme = 'gruvbox',
+        section_separators = '',
+        component_separators = ''
+      }
+    }
+  end
+}
   -- LSP Configuration
   use {
     'neovim/nvim-lspconfig',

@@ -52,17 +52,30 @@ let g:AutoPairsMapCR = 1       " Map <CR> to insert new indented line between pa
 let g:AutoPairsMapSpace = 1    " Map Space to insert space between pairs
 let g:AutoPairsMapBS = 1       " Map Backspace to delete pairs
 
-" Color scheme - Catppuccin instead of Gruvbox
-Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+" " Color scheme - Catppuccin instead of Gruvbox
+" Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+"
+" " Status line
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+" " Enable Powerline fonts (make sure you have them installed)
+" let g:airline_powerline_fonts = 0
+" " If you have issues with symbols, uncomment the line below
+" " let g:airline_symbols_ascii = 1
+" let g:airline_theme = 'catppuccin_macchiato'
+
+" Color scheme - Gruvbox instead of Catppuccin
+Plug 'morhetz/gruvbox'
 
 " Status line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Enable Powerline fonts (make sure you have them installed)
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 " If you have issues with symbols, uncomment the line below
 " let g:airline_symbols_ascii = 1
-let g:airline_theme = 'catppuccin_macchiato'
+let g:gruvbox_contrast_dark = 'hard'
+let g:airline_theme = 'gruvbox'
 
 " Language Server Protocol - using CoC instead of native LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -90,7 +103,7 @@ call plug#end()
 " Set colorscheme
 syntax enable
 set background=dark
-colorscheme catppuccin_macchiato
+colorscheme gruvbox
 
 " CoC extensions to install (similar to the LSP servers in Neovim config)
 let g:coc_global_extensions = [
