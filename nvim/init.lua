@@ -55,7 +55,7 @@ require('packer').startup(function(use)
     end
   }
 
-  -- Color scheme
+  -- Catppuccin color scheme
   use {
     'catppuccin/nvim',
     as = 'catppuccin',
@@ -64,16 +64,42 @@ require('packer').startup(function(use)
     end
   }
 
-  -- Airline status line
+  -- Lualine status line with Catppuccin theme
   use {
-    'vim-airline/vim-airline',
-    requires = {'vim-airline/vim-airline-themes'},
+    'nvim-lualine/lualine.nvim',
     config = function()
-      vim.g.airline_powerline_fonts = 1
-      vim.g.airline_theme = 'catppuccin'
+      require('lualine').setup {
+        options = {
+          theme = 'catppuccin',
+          section_separators = '',
+          component_separators = ''
+        }
+      }
     end
   }
 
+-- Gruvbox color scheme (commented out - uncomment to use)
+-- use {
+--   'morhetz/gruvbox',
+--   config = function()
+--     vim.o.background = 'dark'                -- Ensure dark background
+--     vim.g.gruvbox_contrast_dark = 'hard'     -- Use "hard" contrast
+--     vim.cmd('colorscheme gruvbox')
+--   end
+-- }
+-- -- Lualine with Gruvbox theme (uncomment if using Gruvbox)
+-- use {
+--   'nvim-lualine/lualine.nvim',
+--   config = function()
+--     require('lualine').setup {
+--       options = {
+--         theme = 'gruvbox',
+--         section_separators = '',
+--         component_separators = ''
+--       }
+--     }
+--   end
+-- }
   -- LSP Configuration
   use {
     'neovim/nvim-lspconfig',
