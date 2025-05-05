@@ -1,0 +1,176 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 14px;
+  color: #ebdbb2;  /* Gruvbox Light text */
+  background: #1d2021;  /* Gruvbox Dark background */
+}
+
+#clock, #battery, #network, #pulseaudio, #tray, #bluetooth, #cpu, #disk, #privacy, #backlight, #custom-power {
+  padding: 0 10px;
+  margin: 2px 4px;
+  border-radius: 8px;
+}
+
+/* Individual background colors (Gruvbox-inspired) */
+#clock {
+  background-color: #458588;
+  color: #1d2021;  /* Dark text for contrast on green bg */
+}
+
+#battery {
+  background-color: #98971a;
+  color: #1d2021;  /* Dark text for contrast on green bg */
+}
+
+#network {
+  background-color: #d79921;
+  color: #1d2021;  /* Dark text for contrast on green bg */
+}
+
+#pulseaudio {
+  background-color: #b16286;
+  color: #1d2021;  /* Dark text for contrast on green bg */
+}
+
+#tray {
+  background-color: #665c54;
+  color: #1d2021;  /* Dark text for contrast on green bg */
+}
+
+#bluetooth {
+  background-color: #689d6a;
+  color: #1d2021;  /* Dark text for contrast on green bg */
+}
+
+#cpu {
+  background-color: #d65d0e;
+  color: #1d2021;  /* Dark text for contrast on green bg */
+}
+
+#disk {
+  background-color: #fabd2f;
+  color: #1d2021;  /* Dark text for contrast on green bg */
+}
+
+#backlight {
+  background-color: #83a598;
+  color: #1d2021;  /* Dark text for contrast on green bg */
+}
+
+#privacy {
+  background-color: #8ec07c;
+  padding: 0 12px;
+  border-radius: 8px;
+  color: #1d2021;  /* Dark text for contrast on green bg */
+}
+
+/* Bluetooth states */
+#bluetooth.off {
+  color: #1d2021;  /* Dark text for contrast on green bg */
+}
+
+#bluetooth.on {
+  color: #1d2021;  /* Dark text for contrast on green bg */
+}
+
+#bluetooth.connected {
+  color: #1d2021;  /* Dark text for contrast on green bg */
+}
+
+/* Workspaces */
+#workspaces button {
+  padding: 0 0px;
+  color: #ebdbb2;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  margin: 0 2px;
+}
+
+#workspaces button.focused {
+  background-color: #83a598;
+  color: #1d2021;
+  border-radius: 6px;
+  text-decoration: underline;
+  text-decoration-color: #83a598;
+}
+
+#workspaces button.urgent {
+  background-color: #fe8019;
+  color: #1d2021;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #fe8019;
+}
+
+#workspaces button.visible {
+  background-color: #b8bb26;
+  color: #1d2021;
+  border-radius: 6px;
+  text-decoration: underline;
+  text-decoration-color: #b8bb26;
+}
+
+#workspaces button.empty {
+  opacity: 0.4;
+}
+
+#window {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #ebdbb2;
+  font-weight: 500;
+  font-style: italic;
+}
+#custom-power {
+  background-color: #689d6a;  /* Gruvbox red */
+  color: #1d2021;             /* Dark text for contrast */
+}
+menu {
+  background-color: #1d2021; /* Gruvbox dark background */
+  color: #ebdbb2;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 14px;
+  border-radius: 12px;
+  padding: 6px;
+  border: 1px solid #3c3836;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+menuitem {
+  padding: 8px 16px;
+  margin: 4px;
+  border-radius: 6px;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  background-color: transparent;
+}
+
+menuitem:hover {
+  background-color: #83a598; /* Gruvbox aqua */
+  color: #1d2021;
+  font-weight: bold;
+}
+
+#suspend:hover {
+  background-color: #689d6a; /* Gruvbox green */
+}
+
+#hibernat:hover {
+  background-color: #b16286; /* Gruvbox purple */
+}
+
+#shutdown:hover {
+  background-color: #cc241d; /* Gruvbox red */
+}
+
+#reboot:hover {
+  background-color: #d79921; /* Gruvbox yellow */
+}
+
+GtkSeparatorMenuItem {
+  background-color: transparent;
+  border-top: 1px solid #3c3836;
+  margin: 6px 12px;
+  padding: 0;
+}

@@ -7,8 +7,8 @@ set smartcase             " Smart case sensitivity
 set hlsearch              " Highlight search results
 set wrap                  " Enable line wrapping
 set breakindent           " Preserve indentation in wrapped lines
-set tabstop=4             " Tab width
-set shiftwidth=4          " Indent width
+set tabstop=2             " Tab width
+set shiftwidth=2          " Indent width
 set expandtab             " Use spaces instead of tabs
 set clipboard=unnamedplus " Use system clipboard
 set termguicolors         " True color support
@@ -39,7 +39,7 @@ autocmd FileType text setlocal spell spelllang=en_us
 " Install Vim-Plug if not installed
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
@@ -94,16 +94,16 @@ colorscheme catppuccin_macchiato
 
 " CoC extensions to install (similar to the LSP servers in Neovim config)
 let g:coc_global_extensions = [
-  \ 'coc-clangd',
-  \ 'coc-pyright',
-  \ 'coc-java',
-  \ 'coc-tsserver',
-  \ 'coc-rust-analyzer',
-  \ 'coc-sh',
-  \ 'coc-html',
-  \ 'coc-css',
-  \ 'coc-eslint'
-  \ ]
+      \ 'coc-clangd',
+      \ 'coc-pyright',
+      \ 'coc-java',
+      \ 'coc-tsserver',
+      \ 'coc-rust-analyzer',
+      \ 'coc-sh',
+      \ 'coc-html',
+      \ 'coc-css',
+      \ 'coc-eslint'
+      \ ]
 
 " CoC configuration
 " Use tab for trigger completion with characters ahead and navigate
@@ -124,7 +124,7 @@ inoremap <silent><expr> <c-space> coc#refresh()
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+      \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " GoTo code navigation
 nmap <silent> gd <Plug>(coc-definition)
@@ -166,7 +166,7 @@ nnoremap <leader>e :NERDTreeToggle<CR>
 nnoremap <leader>ff :CtrlP<CR>
 nnoremap <leader>fg :CtrlPLine<CR>
 nnoremap <leader>fb :CtrlPBuffer<CR>
-nnoremap <leader>fh :help 
+nnoremap <leader>fh :help
 
 " Enhanced hover diagnostics - show the full error message
 " This is mostly handled by CoC settings

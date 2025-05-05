@@ -1,0 +1,75 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 14px;
+  color: #ebdbb2;  /* Gruvbox Light text */
+  background: #1d2021;  /* Gruvbox Dark background */
+}
+
+#clock, #battery, #network, #pulseaudio, #tray {
+  padding: 0 10px;
+}
+
+#battery.warning {
+  color: #fb4934;  /* Gruvbox Red */
+}
+
+#workspaces button {
+  padding: 0 0px;
+  color: #ebdbb2;  /* Gruvbox Light text */
+  background: transparent;
+  border: none;
+  text-decoration: none;  /* Remove underline by default */
+}
+
+#workspaces button.focused {
+  background-color: #83a598;  /* Gruvbox Blue */
+  color: #1d2021;  /* Gruvbox Dark background */
+  border-radius: 6px;
+  text-decoration: underline;
+  text-decoration-color: #83a598;  /* Gruvbox Blue */
+}
+
+#workspaces button.urgent {
+  background-color: #fe8019;  /* Gruvbox Orange */
+  color: #1d2021;  /* Gruvbox Dark background */
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #fe8019;  /* Gruvbox Orange */
+}
+
+#workspaces button.visible {
+  background-color: #b8bb26;  /* Gruvbox Green */
+  color: #1d2021;  /* Gruvbox Dark background */
+  border-radius: 6px;
+  text-decoration: underline;
+  text-decoration-color: #b8bb26;  /* Gruvbox Green */
+}
+
+#workspaces button.empty {
+  opacity: 0.4;
+}
+
+#window {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #ebdbb2;  /* Gruvbox Light text */
+  font-weight: 500;
+  font-style: italic;
+}
+
+#bluetooth {
+  padding: 0 10px;
+}
+
+#bluetooth.off {
+  color: #928374;  /* Gruvbox Gray */
+}
+
+#bluetooth.on {
+  color: #8ec07c;  /* Gruvbox Green */
+}
+
+#bluetooth.connected {
+  color: #83a598;  /* Gruvbox Blue */
+}

@@ -1,0 +1,119 @@
+/* General settings */
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 14px;
+  color: @theme_fg_color;  /* Uses the GTK theme foreground color */
+  background: @theme_bg_color;  /* Uses the GTK theme background color */
+}
+
+#clock, #battery, #network, #pulseaudio, #tray, #mpris {
+  padding: 0 10px;
+}
+
+#battery.warning {
+  color: @theme_warning_color;  /* Uses GTK warning color (e.g., for low battery) */
+}
+
+#workspaces button {
+  padding: 0 10px;
+  color: @theme_fg_color;  /* Uses the GTK theme foreground color */
+  background: transparent;
+  border: none;
+  text-decoration: none;  /* Remove underline by default */
+}
+
+#workspaces button.focused {
+  background-color: @theme_selected_bg_color;  /* Uses GTK selected background color */
+  color: @theme_selected_fg_color;  /* Uses GTK selected foreground color */
+  border-radius: 6px;
+  text-decoration: underline;
+  text-decoration-color: @theme_selected_fg_color;  /* Underline color from GTK selected foreground color */
+}
+
+#workspaces button.urgent {
+  background-color: @theme_alert_color;  /* Uses GTK alert color */
+  color: @theme_alert_fg_color;  /* Uses GTK alert foreground color */
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: @theme_alert_fg_color;  /* Alert color underline */
+}
+
+#workspaces button.visible {
+  background-color: @theme_visible_bg_color;  /* Uses GTK visible background color */
+  color: @theme_visible_fg_color;  /* Uses GTK visible foreground color */
+  border-radius: 6px;
+  text-decoration: underline;
+  text-decoration-color: @theme_visible_fg_color;  /* Visible color underline */
+}
+
+#workspaces button.empty {
+  opacity: 0.4;
+}
+
+#window {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: @theme_fg_color;  /* GTK foreground color */
+  font-weight: 500;
+  font-style: italic;
+}
+
+#bluetooth {
+  padding: 0 10px;
+}
+
+#bluetooth.off {
+  color: @theme_disabled_color;  /* Disabled state color from GTK */
+}
+
+#bluetooth.on {
+  color: @theme_on_color;  /* Color for active states */
+}
+
+#bluetooth.connected {
+  color: @theme_connected_color;  /* Color for connected states */
+}
+
+#pulseaudio {
+  color: @theme_fg_color;  /* Uses GTK foreground color */
+}
+
+#network {
+  color: @theme_fg_color;  /* Uses GTK foreground color */
+}
+
+#tray {
+  /* Tray icon size and other styles will be configured in Waybar's config file */
+  background: @theme_bg_color;
+  color: @theme_fg_color;  /* Tray uses GTK colors */
+}
+
+#battery {
+  color: @theme_fg_color;  /* Uses GTK foreground color */
+}
+
+#battery.warning {
+  color: @theme_warning_color;  /* Warning color */
+}
+
+#battery.charging {
+  color: @theme_charging_color;  /* Charging state color */
+}
+
+#mpris {
+  color: @theme_fg_color;  /* Uses GTK foreground color */
+}
+
+#mpris.format-stopped {
+  color: @theme_disabled_color;  /* Uses GTK disabled color when stopped */
+}
+
+#mpris.format {
+  color: @theme_fg_color;  /* Uses GTK foreground color */
+}
+
+#mpris.tooltip {
+  background-color: @theme_tooltip_bg_color;  /* Tooltip background color */
+  color: @theme_tooltip_fg_color;  /* Tooltip foreground color */
+}

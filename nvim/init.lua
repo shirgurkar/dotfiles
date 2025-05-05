@@ -7,8 +7,8 @@ vim.opt.smartcase = true        -- Smart case sensitivity
 vim.opt.hlsearch = true         -- Highlight search results
 vim.opt.wrap = true             -- Enable line wrapping
 vim.opt.breakindent = true      -- Preserve indentation in wrapped lines
-vim.opt.tabstop = 4             -- Tab width
-vim.opt.shiftwidth = 4          -- Indent width
+vim.opt.tabstop = 2             -- Tab width
+vim.opt.shiftwidth = 2          -- Indent width
 vim.opt.expandtab = true        -- Use spaces instead of tabs
 vim.opt.clipboard = 'unnamedplus' -- Use system clipboard
 vim.opt.termguicolors = true    -- True color support
@@ -45,14 +45,14 @@ require('packer').startup(function(use)
 
   -- Auto pairs for brackets, quotes, etc.
   use {
-      'jiangmiao/auto-pairs',
-      config = function()
-          -- Default configuration is usually sufficient
-          -- You can add custom settings if needed:
-          vim.g.AutoPairsMapCR = 1       -- Map <CR> to insert new indented line between pairs
-          vim.g.AutoPairsMapSpace = 1    -- Map Space to insert space between pairs
-          vim.g.AutoPairsMapBS = 1       -- Map Backspace to delete pairs
-      end
+    'jiangmiao/auto-pairs',
+    config = function()
+      -- Default configuration is usually sufficient
+      -- You can add custom settings if needed:
+      vim.g.AutoPairsMapCR = 1       -- Map <CR> to insert new indented line between pairs
+      vim.g.AutoPairsMapSpace = 1    -- Map Space to insert space between pairs
+      vim.g.AutoPairsMapBS = 1       -- Map Backspace to delete pairs
+    end
   }
 
   -- Color scheme
