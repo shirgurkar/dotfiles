@@ -174,3 +174,45 @@ GtkSeparatorMenuItem {
   margin: 6px 12px;
   padding: 0;
 }
+#workspaces {
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+#workspaces button {
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #ebdbb2; /* Gruvbox fg */
+    background: transparent;
+}
+
+/* Focused workspace */
+#workspaces button.focused {
+    border-bottom: 2px solid #d79921; /* Gruvbox yellow */
+    color: #fabd2f;
+}
+
+/* Urgent workspace */
+#workspaces button.urgent {
+    border-bottom: 2px solid #cc241d; /* Gruvbox red */
+    color: #fb4934;
+    font-weight: bold;
+}
+
+/* Visible but not focused (e.g., on another monitor) */
+#workspaces button.visible {
+    border-bottom: 2px solid #83a598; /* Gruvbox blue */
+    color: #b8bb26;
+}
+
+/* Inactive workspace */
+#workspaces button:not(.focused):not(.urgent):not(.visible) {
+    border-bottom: 2px solid transparent;
+    color: #a89984; /* Gruvbox gray */
+}
+
+/* Hover effect */
+#workspaces button:hover {
+    background: #3c3836; /* Gruvbox dark gray */
+    border-bottom: 2px solid #458588; /* Gruvbox aqua */
+}
