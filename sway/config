@@ -12,6 +12,7 @@ set $ebook_manager calibre
 set $menu wofi --allow-images --allow-markup --insensitive --show drun
 
 exec --no-startup-id waybar -s ~/.config/waybar/gruvbox.css &
+exec --no-startup-id python3 ~/.config/autotiling/autotiling.py
 
 input type:touchpad {
   tap enabled
@@ -126,6 +127,8 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+bindsym $mod+Shift+w exec ~/.local/bin/set-wallpaper.sh
+include ~/.config/sway/wallpaper.config
 
 gaps outer 2
 gaps inner 10
