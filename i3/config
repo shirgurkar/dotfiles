@@ -10,6 +10,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 exec --no-startup-id volumeicon
 exec --no-startup-id blueman
+exec --no-startup-id python3 ~/.config/autotiling/autotiling.py
 
 set $refresh_i3status killall -SIGUSR1 i3blocks
 set $term kitty
@@ -73,6 +74,7 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+default_border pixel 2
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
 bindsym $mod+3 workspace number $ws3
@@ -131,3 +133,7 @@ bar {
         binding_mode       #2f343a #900000 #ffffff
     }
 }
+gaps outer 2
+gaps inner 10
+
+bindsym Print exec grim
